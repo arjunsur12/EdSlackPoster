@@ -1,5 +1,4 @@
 import requests
-import os
 
 ED_API = "https://us.edstem.org/api"
 TOKEN = "3_hHeV.wyFNkToVijUizA28jgxKDS3UlQPN7sqNExiTKcvH"
