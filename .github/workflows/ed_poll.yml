@@ -35,8 +35,9 @@ jobs:
         env:
           ED_API_TOKEN: ${{ secrets.ED_API_TOKEN }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          ED_COURSE_ID: ${{ secrets.ED_COURSE_ID }}
         run: |
-          python ed_poll.py --course-id 81634 --once
+          python ed_poll.py --course-id $ED_COURSE_ID --once
 
       # Persist dedupe state by committing the state file back to repo
       - name: Commit state file if changed
